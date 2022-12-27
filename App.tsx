@@ -1,11 +1,16 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import {StyleSheet} from 'react-native';
+import SearchNews from './src/modules/SearchNews/SearchNews.screen';
+import {Provider as PaperProvider} from 'react-native-paper';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>Screen</Text>
-    </SafeAreaView>
+    <PaperProvider>
+      <SafeAreaView style={styles.container}>
+        <SearchNews />
+      </SafeAreaView>
+    </PaperProvider>
   );
 };
 
