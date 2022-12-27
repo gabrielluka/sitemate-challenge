@@ -25,9 +25,7 @@ const SearchNewsScreen = () => {
         <ActivityIndicator style={styles.container} size="large" />
       ) : (
         <FlatList
-          keyExtractor={(item, index) =>
-            `${item.source.id}${item.source.name}${index}`
-          }
+          keyExtractor={item => `${item.source.id}${item.publishedAt}`}
           maxToRenderPerBatch={5}
           initialNumToRender={6}
           data={news?.articles}
